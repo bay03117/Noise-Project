@@ -1,0 +1,16 @@
+long now = System.currentTimeMillis();
+    Date date = new Date(now);
+    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyyMMDDHHMM");
+    String formatDate = sdfNow.format(date);
+
+
+ TextView dateNow;
+
+  String year =  formatDate.substring(0,3);
+        String month =  formatDate.substring(4,5);
+        String date =  formatDate.substring(6,7);
+        String hour =  formatDate.substring(8,9);
+        String minute =  formatDate.substring(10,11);
+
+        dateNow = (TextView) findViewById(R.id.dateNow);
+        dateNow.setText(year+"년"+month+"월"+date+"일"+hour+":"+minute+"분");
